@@ -37,15 +37,6 @@ function OurJourney() {
               V 440
             "
           />
-
-          {/* Forward arrows */}
-          <path d="M 250 0 L 243 -7 M 250 0 L 243 7" />
-          <path d="M 500 0 L 493 -7 M 500 0 L 493 7" />
-          <path d="M 750 0 L 743 -7 M 750 0 L 743 7" />
-
-          {/* Reverse arrows */}
-          <path d="M 500 210 L 507 203 M 500 210 L 507 217" />
-          <path d="M 250 210 L 257 203 M 250 210 L 257 217" />
         </svg>
 
         {/* 01 */}
