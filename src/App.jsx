@@ -7,6 +7,7 @@ import FeaturedServices from "./components/FeaturedServices";
 import ExperienceTrust from "./components/ExperienceTrust";
 import OurJourney from "./components/OurJourney";
 import ContactCTA from "./components/ContactCTA";
+import Footer from "./components/Footer";
 import "./App.css";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <ExperienceTrust />
       <OurJourney />
       <ContactCTA />
+      <Footer />
     </>
   );
 }
