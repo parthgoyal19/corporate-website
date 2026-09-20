@@ -1,4 +1,4 @@
-function OurJourney1() {
+function OurJourneyPage() {
   return (
     <section>
       <h1>Our Journey</h1>
@@ -7,4 +7,4 @@ function OurJourney1() {
   );
 }
 
-export default OurJourney1;
+export default OurJourneyPage;
