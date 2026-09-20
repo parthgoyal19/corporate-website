@@ -23,7 +23,8 @@
   gap: 32px;
 }
 
-.navbar-links a {
+.navbar-links a.active {
+  color: #ff9800;
   position: relative;
   text-decoration: none;
   color: #102020;

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 function ContactCTA() {
   return (
     <section className="contact-cta">
@@ -16,13 +17,13 @@ function ContactCTA() {
         </p>
 
         <div className="contact-cta-buttons">
-          <a href="/contact" className="contact-cta-primary">
+          <Link to="/contact" className="contact-cta-primary">
             Start a Conversation →
-          </a>
+          </Link>
 
-          <a href="/services" className="contact-cta-secondary">
+          <Link to="/services" className="contact-cta-secondary">
             Explore Services
-          </a>
+          </Link>
         </div>
       </div>
 

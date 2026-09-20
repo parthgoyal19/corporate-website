@@ -1,22 +1,40 @@
+import { NavLink } from "react-router-dom";
 import logo from "../assets/52150829.png";
+
 function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-        <img src={logo} alt="Mutual Growth" />
+        <NavLink to="/">
+          <img src={logo} alt="Mutual Growth" />
+        </NavLink>
       </div>
 
       <div className="navbar-links">
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/services">Services</a>
-        <a href="/journey">Our Journey</a>
-        <a href="/contact">Contact</a>
+        <NavLink to="/" end>
+          Home
+        </NavLink>
+
+        <NavLink to="/about">
+          About
+        </NavLink>
+
+        <NavLink to="/services">
+          Services
+        </NavLink>
+
+        <NavLink to="/journey">
+          Our Journey
+        </NavLink>
+
+        <NavLink to="/contact">
+          Contact
+        </NavLink>
       </div>
 
-      <a href="/contact" className="navbar-cta">
+      <NavLink to="/contact" className="navbar-cta">
         Let's Talk →
-      </a>
+      </NavLink>
     </nav>
   );
 }
