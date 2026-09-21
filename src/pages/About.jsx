@@ -50,6 +50,39 @@ function About() {
                     </div>
                 </div>
             </section>
+            <section className="about-mission-vision">
+                <div className="about-mission">
+                    <p className="section-label">OUR MISSION</p>
+
+                    <h2>
+                        Helping individuals
+                        <span>move towards financial freedom.</span>
+                    </h2>
+
+                    <p className="about-mission-description">
+                        Our mission is to help individuals move towards financial
+                        independence, make informed financial decisions and build
+                        long-term wealth through a structured and disciplined
+                        approach.
+                    </p>
+                </div>
+
+                <div className="about-vision">
+                    <p className="section-label">OUR VISION</p>
+
+                    <h2>
+                        Making finance
+                        <span>easier to understand.</span>
+                    </h2>
+
+                    <p className="about-vision-description">
+                        We believe finance should not feel complicated. Through
+                        financial literacy and discipline, we aim to help people
+                        better understand their money, their decisions and their
+                        financial future.
+                    </p>
+                </div>
+            </section>
         </main>
     );
 }

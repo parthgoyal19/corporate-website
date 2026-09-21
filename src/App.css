@@ -2595,3 +2595,99 @@
     gap: 14px 20px;
   }
 }
+
+/* =========================
+   ABOUT PAGE - MISSION & VISION
+   ========================= */
+
+.about-mission-vision {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  background-color: #002f2f;
+}
+
+.about-mission,
+.about-vision {
+  padding: 100px 70px;
+}
+
+.about-mission {
+  border-right: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.about-mission .section-label,
+.about-vision .section-label {
+  margin-bottom: 24px;
+  color: #ff9800;
+}
+
+.about-mission h2,
+.about-vision h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 48px;
+  line-height: 1.1;
+  font-weight: 600;
+  letter-spacing: -1.5px;
+}
+
+.about-mission h2 span,
+.about-vision h2 span {
+  display: block;
+  color: #ff9800;
+}
+
+.about-mission-description,
+.about-vision-description {
+  max-width: 600px;
+  margin-top: 30px;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 17px;
+  line-height: 1.85;
+}
+
+
+/* =========================
+   ABOUT PAGE - MISSION & VISION
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 900px) {
+  .about-mission-vision {
+    grid-template-columns: 1fr;
+  }
+
+  .about-mission {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  }
+
+  .about-mission,
+  .about-vision {
+    padding: 80px 40px;
+  }
+
+  .about-mission h2,
+  .about-vision h2 {
+    font-size: 44px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-mission,
+  .about-vision {
+    padding: 70px 24px;
+  }
+
+  .about-mission h2,
+  .about-vision h2 {
+    font-size: 38px;
+    letter-spacing: -1px;
+  }
+
+  .about-mission-description,
+  .about-vision-description {
+    font-size: 16px;
+  }
+}
