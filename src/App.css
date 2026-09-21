@@ -2497,3 +2497,101 @@
     font-size: 16px;
   }
 }
+
+/* =========================
+   ABOUT PAGE - WHO WE ARE
+   ========================= */
+
+.about-who-we-are {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 100px;
+  padding: 110px 60px;
+  background-color: #ffffff;
+}
+
+.about-who-content {
+  max-width: 520px;
+}
+
+.about-who-content .section-label {
+  margin-bottom: 24px;
+  color: #ff9800;
+}
+
+.about-who-content h2 {
+  margin: 0;
+  color: #002f2f;
+  font-size: 52px;
+  line-height: 1.1;
+  font-weight: 600;
+  letter-spacing: -1.5px;
+}
+
+.about-who-content h2 span {
+  display: block;
+  color: #5e6b6b;
+}
+
+.about-who-text {
+  max-width: 700px;
+}
+
+.about-who-text p {
+  margin: 0 0 24px;
+  color: #5e6b6b;
+  font-size: 17px;
+  line-height: 1.85;
+}
+
+.about-who-highlight {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 30px;
+  margin-top: 40px;
+  padding-top: 28px;
+  border-top: 1px solid #dfe6e5;
+}
+
+.about-who-highlight span {
+  color: #002f2f;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+/* =========================
+   ABOUT PAGE - WHO WE ARE RESPONSIVE
+   ========================= */
+
+@media (max-width: 900px) {
+  .about-who-we-are {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    padding: 90px 40px;
+  }
+
+  .about-who-content h2 {
+    font-size: 46px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-who-we-are {
+    gap: 40px;
+    padding: 75px 24px;
+  }
+
+  .about-who-content h2 {
+    font-size: 40px;
+    letter-spacing: -1px;
+  }
+
+  .about-who-text p {
+    font-size: 16px;
+  }
+
+  .about-who-highlight {
+    gap: 14px 20px;
+  }
+}
