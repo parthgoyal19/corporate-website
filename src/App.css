@@ -33,6 +33,15 @@
   transition: color 0.3s ease;
 }
 
+.navbar-links a {
+  color: #102020;
+  text-decoration: none;
+}
+
+.navbar-links a:visited {
+  color: #102020;
+}
+
 .navbar-links a:hover {
   color: #ff9800;
 }
@@ -2408,5 +2417,83 @@
   .footer-socials {
     flex-wrap: wrap;
     gap: 14px 20px;
+  }
+}
+
+/* =========================
+   ABOUT PAGE - HERO
+   ========================= */
+
+.about-page {
+  background-color: #ffffff;
+}
+
+.about-hero {
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  padding: 100px 60px;
+  background-color: #f7f6f2;
+}
+
+.about-hero-content {
+  max-width: 900px;
+}
+
+.about-hero .section-label {
+  margin-bottom: 24px;
+  color: #ff9800;
+}
+
+.about-hero h1 {
+  margin: 0;
+  color: #002f2f;
+  font-size: 72px;
+  line-height: 1.05;
+  font-weight: 600;
+  letter-spacing: -2px;
+}
+
+.about-hero h1 span {
+  display: block;
+  color: #ff9800;
+}
+
+.about-hero-description {
+  max-width: 680px;
+  margin-top: 30px;
+  color: #5e6b6b;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+/* =========================
+   ABOUT PAGE RESPONSIVE - HERO
+   ========================= */
+
+@media (max-width: 900px) {
+  .about-hero {
+    min-height: 520px;
+    padding: 80px 40px;
+  }
+
+  .about-hero h1 {
+    font-size: 56px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-hero {
+    min-height: 480px;
+    padding: 70px 24px;
+  }
+
+  .about-hero h1 {
+    font-size: 44px;
+    letter-spacing: -1px;
+  }
+
+  .about-hero-description {
+    font-size: 16px;
   }
 }
