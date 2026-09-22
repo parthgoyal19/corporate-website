@@ -214,6 +214,80 @@ function About() {
                     </div>
                 </div>
             </section>
+            <section className="about-approach">
+                <div className="about-approach-header">
+                    <p className="section-label">OUR APPROACH</p>
+
+                    <h2>
+                        From where you are
+                        <span>to where you want to go.</span>
+                    </h2>
+
+                    <p>
+                        Financial planning begins with understanding. We look at
+                        the bigger picture before thinking about individual
+                        financial decisions.
+                    </p>
+                </div>
+
+                <div className="about-approach-steps">
+                    <div className="about-approach-step">
+                        <span>01</span>
+
+                        <h3>Understand</h3>
+
+                        <p>
+                            Understand your current financial position, priorities,
+                            responsibilities and the goals that matter to you.
+                        </p>
+                    </div>
+
+                    <div className="about-approach-step">
+                        <span>02</span>
+
+                        <h3>Plan</h3>
+
+                        <p>
+                            Bring your goals together into a structured financial
+                            plan based on your priorities and time horizons.
+                        </p>
+                    </div>
+
+                    <div className="about-approach-step">
+                        <span>03</span>
+
+                        <h3>Protect</h3>
+
+                        <p>
+                            Consider the risks that could affect your financial
+                            journey and plan for the protection of what matters.
+                        </p>
+                    </div>
+
+                    <div className="about-approach-step">
+                        <span>04</span>
+
+                        <h3>Invest</h3>
+
+                        <p>
+                            Align appropriate investment solutions with your goals,
+                            time horizon and overall financial plan.
+                        </p>
+                    </div>
+
+                    <div className="about-approach-step">
+                        <span>05</span>
+
+                        <h3>Review</h3>
+
+                        <p>
+                            Financial circumstances change over time. A plan needs
+                            to be reviewed and adjusted as your goals and situation
+                            evolve.
+                        </p>
+                    </div>
+                </div>
+            </section>
         </main>
     );
 }
