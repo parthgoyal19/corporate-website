@@ -83,6 +83,137 @@ function About() {
                     </p>
                 </div>
             </section>
+            <section className="about-philosophy">
+                <div className="about-philosophy-intro">
+                    <p className="section-label">OUR PHILOSOPHY</p>
+
+                    <h2>
+                        Wealth isn't built
+                        <span>overnight.</span>
+                    </h2>
+
+                    <p>
+                        Meaningful long-term wealth is a journey. It is built
+                        through understanding, discipline, consistency and the
+                        patience to stay focused on the bigger picture.
+                    </p>
+                </div>
+
+                <div className="about-philosophy-principles">
+                    <div className="about-philosophy-principle">
+                        <span>01</span>
+                        <h3>Knowledge</h3>
+                        <p>
+                            Understand your money, your choices and the goals
+                            you are working towards.
+                        </p>
+                    </div>
+
+                    <div className="about-philosophy-principle">
+                        <span>02</span>
+                        <h3>Discipline</h3>
+                        <p>
+                            Good financial decisions become meaningful when
+                            they are followed with discipline.
+                        </p>
+                    </div>
+
+                    <div className="about-philosophy-principle">
+                        <span>03</span>
+                        <h3>Consistency</h3>
+                        <p>
+                            Small, thoughtful decisions made consistently can
+                            shape a stronger financial future.
+                        </p>
+                    </div>
+
+                    <div className="about-philosophy-principle">
+                        <span>04</span>
+                        <h3>Time</h3>
+                        <p>
+                            Long-term wealth needs time. Patience allows a
+                            financial plan to work towards its intended goals.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section className="about-founder">
+                <div className="about-founder-intro">
+                    <p className="section-label">FOUNDER & EXPERIENCE</p>
+
+                    <h2>
+                        Experience that
+                        <span>shaped the journey.</span>
+                    </h2>
+
+                    <p className="about-founder-description">
+                        Mutual Growth is founded by Mr. Shailesh Goyal, whose
+                        career across the financial services industry spans
+                        more than 25 years.
+                    </p>
+
+                    <p className="about-founder-description">
+                        His journey across different financial institutions
+                        has provided experience across multiple aspects of the
+                        industry and shaped his approach towards financial
+                        planning, discipline and long-term wealth creation.
+                    </p>
+                </div>
+
+                <div className="about-founder-story">
+                    <div className="about-founder-profile">
+                        <p className="about-founder-name">MR. SHAILESH GOYAL</p>
+                        <span>FOUNDER — MUTUAL GROWTH</span>
+                    </div>
+
+                    <div className="about-founder-career">
+                        <div className="about-founder-career-item">
+                            <span>01</span>
+                            <p>IDBI Principal</p>
+                        </div>
+
+                        <div className="about-founder-career-item">
+                            <span>02</span>
+                            <p>UTI Securities</p>
+                        </div>
+
+                        <div className="about-founder-career-item">
+                            <span>03</span>
+                            <p>Bajaj Capital</p>
+                        </div>
+
+                        <div className="about-founder-career-item">
+                            <span>04</span>
+                            <p>JM Mutual Fund</p>
+                        </div>
+
+                        <div className="about-founder-career-item">
+                            <span>05</span>
+                            <p>Edelweiss MF</p>
+                        </div>
+
+                        <div className="about-founder-career-item">
+                            <span>06</span>
+                            <p>Sundaram MF</p>
+                        </div>
+
+                        <div className="about-founder-career-item">
+                            <span>07</span>
+                            <p>ITI MF</p>
+                        </div>
+                    </div>
+
+                    <div className="about-founder-transition">
+                        <span>THE NEXT CHAPTER</span>
+                        <strong>Mutual Growth</strong>
+                        <p>
+                            After serving as Assistant Vice President at ITI MF,
+                            Mr. Goyal began his entrepreneurial journey with
+                            Mutual Growth.
+                        </p>
+                    </div>
+                </div>
+            </section>
         </main>
     );
 }

@@ -2691,3 +2691,346 @@
     font-size: 16px;
   }
 }
+
+/* =========================
+   ABOUT PAGE - OUR PHILOSOPHY
+   ========================= */
+
+.about-philosophy {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 90px;
+  padding: 110px 60px;
+  background-color: #f7f6f2;
+}
+
+.about-philosophy-intro {
+  max-width: 560px;
+}
+
+.about-philosophy-intro .section-label {
+  margin-bottom: 24px;
+  color: #ff9800;
+}
+
+.about-philosophy-intro h2 {
+  margin: 0;
+  color: #002f2f;
+  font-size: 56px;
+  line-height: 1.08;
+  font-weight: 600;
+  letter-spacing: -1.8px;
+}
+
+.about-philosophy-intro h2 span {
+  display: block;
+  color: #ff9800;
+}
+
+.about-philosophy-intro > p:last-child {
+  max-width: 520px;
+  margin-top: 30px;
+  color: #5e6b6b;
+  font-size: 17px;
+  line-height: 1.85;
+}
+
+
+/* =========================
+   PHILOSOPHY PRINCIPLES
+   ========================= */
+
+.about-philosophy-principles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  align-self: center;
+}
+
+.about-philosophy-principle {
+  padding: 35px 35px 40px;
+  border-top: 1px solid #d7dfde;
+}
+
+.about-philosophy-principle:nth-child(odd) {
+  border-right: 1px solid #d7dfde;
+}
+
+.about-philosophy-principle:nth-child(3),
+.about-philosophy-principle:nth-child(4) {
+  border-bottom: 1px solid #d7dfde;
+}
+
+.about-philosophy-principle span {
+  display: block;
+  margin-bottom: 22px;
+  color: #ff9800;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.about-philosophy-principle h3 {
+  margin: 0;
+  color: #002f2f;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.about-philosophy-principle p {
+  margin-top: 14px;
+  color: #5e6b6b;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+
+/* =========================
+   ABOUT PAGE - OUR PHILOSOPHY
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 900px) {
+  .about-philosophy {
+    grid-template-columns: 1fr;
+    gap: 60px;
+    padding: 90px 40px;
+  }
+
+  .about-philosophy-intro h2 {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-philosophy {
+    gap: 45px;
+    padding: 75px 24px;
+  }
+
+  .about-philosophy-intro h2 {
+    font-size: 40px;
+    letter-spacing: -1px;
+  }
+
+  .about-philosophy-intro > p:last-child {
+    font-size: 16px;
+  }
+
+  .about-philosophy-principles {
+    grid-template-columns: 1fr;
+  }
+
+  .about-philosophy-principle {
+    padding: 28px 0;
+    border-right: none !important;
+  }
+
+  .about-philosophy-principle:nth-child(3) {
+    border-bottom: none;
+  }
+
+  .about-philosophy-principle:nth-child(4) {
+    border-bottom: 1px solid #d7dfde;
+  }
+}
+
+/* =========================
+   ABOUT PAGE - FOUNDER
+   ========================= */
+
+.about-founder {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 100px;
+  padding: 120px 60px;
+  background-color: #ffffff;
+}
+
+.about-founder-intro {
+  max-width: 560px;
+}
+
+.about-founder-intro .section-label {
+  margin-bottom: 24px;
+  color: #ff9800;
+}
+
+.about-founder-intro h2 {
+  margin: 0;
+  color: #002f2f;
+  font-size: 56px;
+  line-height: 1.08;
+  font-weight: 600;
+  letter-spacing: -1.8px;
+}
+
+.about-founder-intro h2 span {
+  display: block;
+  color: #ff9800;
+}
+
+.about-founder-description {
+  max-width: 540px;
+  margin-top: 28px;
+  color: #5e6b6b;
+  font-size: 17px;
+  line-height: 1.85;
+}
+
+
+/* =========================
+   FOUNDER STORY
+   ========================= */
+
+.about-founder-story {
+  max-width: 700px;
+  align-self: center;
+}
+
+.about-founder-profile {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #dfe6e5;
+}
+
+.about-founder-name {
+  margin: 0;
+  color: #002f2f;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.about-founder-profile span {
+  display: block;
+  margin-top: 8px;
+  color: #5e6b6b;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.7px;
+}
+
+
+/* =========================
+   FOUNDER CAREER
+   ========================= */
+
+.about-founder-career {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.about-founder-career-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  min-height: 80px;
+  border-bottom: 1px solid #dfe6e5;
+}
+
+.about-founder-career-item:nth-child(odd) {
+  padding-right: 25px;
+  border-right: 1px solid #dfe6e5;
+}
+
+.about-founder-career-item:nth-child(even) {
+  padding-left: 25px;
+}
+
+.about-founder-career-item span {
+  color: #ff9800;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.about-founder-career-item p {
+  margin: 0;
+  color: #002f2f;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+
+/* =========================
+   FOUNDER TRANSITION
+   ========================= */
+
+.about-founder-transition {
+  margin-top: 35px;
+  padding: 30px;
+  background-color: #f7f6f2;
+  border-left: 3px solid #ff9800;
+}
+
+.about-founder-transition span {
+  display: block;
+  margin-bottom: 10px;
+  color: #5e6b6b;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+.about-founder-transition strong {
+  display: block;
+  color: #002f2f;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.about-founder-transition p {
+  max-width: 560px;
+  margin-top: 12px;
+  color: #5e6b6b;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+
+/* =========================
+   FOUNDER - RESPONSIVE
+   ========================= */
+
+@media (max-width: 900px) {
+  .about-founder {
+    grid-template-columns: 1fr;
+    gap: 60px;
+    padding: 90px 40px;
+  }
+
+  .about-founder-intro h2 {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-founder {
+    gap: 45px;
+    padding: 75px 24px;
+  }
+
+  .about-founder-intro h2 {
+    font-size: 40px;
+    letter-spacing: -1px;
+  }
+
+  .about-founder-description {
+    font-size: 16px;
+  }
+
+  .about-founder-career {
+    grid-template-columns: 1fr;
+  }
+
+  .about-founder-career-item,
+  .about-founder-career-item:nth-child(odd),
+  .about-founder-career-item:nth-child(even) {
+    padding: 20px 0;
+    border-right: none;
+  }
+
+  .about-founder-transition {
+    padding: 25px;
+  }
+}
