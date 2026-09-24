@@ -7107,3 +7107,311 @@
     bottom: 75px;
   }
 }
+
+/* =========================================
+   OUR JOURNEY — CLOSING
+========================================= */
+
+.journey-closing {
+  position: relative;
+  min-height: 560px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 70px;
+  padding: 90px 70px;
+  overflow: hidden;
+  background-color: #f7f6f2;
+}
+
+/* -----------------------------------------
+   CONTENT
+----------------------------------------- */
+
+.journey-closing-content {
+  position: relative;
+  z-index: 4;
+  max-width: 700px;
+}
+
+.journey-closing .section-label {
+  margin-bottom: 22px;
+  color: #ff9800;
+}
+
+.journey-closing-content h2 {
+  margin: 0;
+  color: #002f2f;
+  font-size: 56px;
+  line-height: 1.08;
+  font-weight: 600;
+  letter-spacing: -2px;
+}
+
+.journey-closing-content h2 span {
+  display: block;
+  color: #ff9800;
+}
+
+.journey-closing-description {
+  max-width: 570px;
+  margin-top: 26px;
+  color: #5e6b6b;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+
+/* -----------------------------------------
+   BUTTON
+----------------------------------------- */
+
+.journey-closing-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 32px;
+  padding: 15px 25px;
+  border: 1px solid #002f2f;
+  color: #ffffff;
+  background-color: #002f2f;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.journey-closing-button:hover {
+  background-color: transparent;
+  color: #002f2f;
+  transform: translateY(-2px);
+}
+
+
+/* -----------------------------------------
+   RIGHT VISUAL
+----------------------------------------- */
+
+.journey-closing-mark {
+  position: relative;
+  width: 390px;
+  height: 390px;
+  margin: 0 auto;
+}
+
+.closing-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.closing-ring-one {
+  width: 380px;
+  height: 380px;
+  border: 1px solid rgba(0, 47, 47, 0.10);
+}
+
+.closing-ring-two {
+  width: 275px;
+  height: 275px;
+  border: 1px dashed rgba(255, 152, 0, 0.42);
+}
+
+
+/* -----------------------------------------
+   CENTER MARK
+----------------------------------------- */
+
+.closing-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+
+  width: 165px;
+  height: 165px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: #002f2f;
+  text-align: center;
+
+  box-shadow: 0 25px 60px rgba(0, 47, 47, 0.15);
+}
+
+.closing-center span {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 8px;
+  letter-spacing: 2.5px;
+}
+
+.closing-center strong {
+  margin-top: 8px;
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 1px;
+}
+
+
+/* -----------------------------------------
+   SMALL ACCENT POINTS
+----------------------------------------- */
+
+.journey-closing-mark::before,
+.journey-closing-mark::after {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: #ff9800;
+  box-shadow: 0 0 0 6px rgba(255, 152, 0, 0.08);
+}
+
+.journey-closing-mark::before {
+  top: 42px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.journey-closing-mark::after {
+  right: 42px;
+  bottom: 80px;
+}
+
+
+/* -----------------------------------------
+   BACKGROUND DETAILS
+----------------------------------------- */
+
+.journey-closing::before {
+  content: "";
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  right: -260px;
+  top: -250px;
+  border: 1px solid rgba(0, 47, 47, 0.06);
+  border-radius: 50%;
+}
+
+.journey-closing::after {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  left: -110px;
+  bottom: -110px;
+  border-radius: 50%;
+  background-color: rgba(255, 152, 0, 0.035);
+}
+
+
+/* -----------------------------------------
+   RESPONSIVE
+----------------------------------------- */
+
+@media (max-width: 1000px) {
+
+  .journey-closing {
+    grid-template-columns: 1fr;
+    gap: 55px;
+    padding: 85px 50px 100px;
+  }
+
+  .journey-closing-content {
+    max-width: 760px;
+  }
+
+  .journey-closing-mark {
+    width: 330px;
+    height: 330px;
+  }
+
+  .closing-ring-one {
+    width: 320px;
+    height: 320px;
+  }
+
+  .closing-ring-two {
+    width: 235px;
+    height: 235px;
+  }
+
+  .closing-center {
+    width: 145px;
+    height: 145px;
+  }
+}
+
+
+@media (max-width: 650px) {
+
+  .journey-closing {
+    gap: 45px;
+    padding: 75px 24px 85px;
+  }
+
+  .journey-closing-content h2 {
+    font-size: 44px;
+    letter-spacing: -1.5px;
+  }
+
+  .journey-closing-description {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+
+  .journey-closing-button {
+    margin-top: 28px;
+  }
+
+  .journey-closing-mark {
+    width: 280px;
+    height: 280px;
+  }
+
+  .closing-ring-one {
+    width: 270px;
+    height: 270px;
+  }
+
+  .closing-ring-two {
+    width: 195px;
+    height: 195px;
+  }
+
+  .closing-center {
+    width: 120px;
+    height: 120px;
+  }
+
+  .closing-center span {
+    font-size: 6px;
+  }
+
+  .closing-center strong {
+    font-size: 15px;
+  }
+
+  .journey-closing-mark::before {
+    top: 28px;
+  }
+
+  .journey-closing-mark::after {
+    right: 28px;
+    bottom: 55px;
+  }
+}

@@ -521,6 +521,46 @@ function OurJourneyPage() {
         </div>
 
       </section>
+      <section className="journey-closing">
+
+        <div className="journey-closing-content">
+
+          <p className="section-label">
+            YOUR JOURNEY
+          </p>
+
+          <h2>
+            Every financial journey
+            <span>has a starting point.</span>
+          </h2>
+
+          <p className="journey-closing-description">
+            Understanding where you are today can be the first step
+            towards planning where you want to go tomorrow.
+          </p>
+
+          <Link
+            to="/contact"
+            className="journey-closing-button"
+          >
+            Start With Clarity →
+          </Link>
+
+        </div>
+
+        <div className="journey-closing-mark">
+
+          <div className="closing-ring closing-ring-one"></div>
+          <div className="closing-ring closing-ring-two"></div>
+
+          <div className="closing-center">
+            <span>KEEP MONEY</span>
+            <strong>@ WORK</strong>
+          </div>
+
+        </div>
+
+      </section>
 
     </main>
   );
