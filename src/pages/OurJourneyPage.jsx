@@ -167,6 +167,62 @@ function OurJourneyPage() {
         </div>
 
       </section>
+      <section className="journey-next-chapter">
+
+        <div className="journey-next-chapter-content">
+
+          <p className="section-label">
+            THE NEXT CHAPTER
+          </p>
+
+          <h2>
+            From experience
+            <span>to entrepreneurship.</span>
+          </h2>
+
+          <p className="journey-next-chapter-description">
+            After serving as Assistant Vice President at ITI MF,
+            Mr. Shailesh Goyal began a new chapter — bringing
+            together his experience and perspective to build
+            Mutual Growth.
+          </p>
+
+          <div className="journey-next-chapter-transition">
+
+            <div className="journey-transition-step">
+              <span>01</span>
+              <strong>ITI MF</strong>
+              <p>Assistant Vice President</p>
+            </div>
+
+            <div className="journey-transition-arrow">
+              →
+            </div>
+
+            <div className="journey-transition-step journey-transition-highlight">
+              <span>02</span>
+              <strong>MUTUAL GROWTH</strong>
+              <p>Founded August 2024</p>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div className="journey-next-chapter-mark">
+
+          <div className="journey-growth-orbit journey-growth-orbit-one"></div>
+          <div className="journey-growth-orbit journey-growth-orbit-two"></div>
+
+          <div className="journey-growth-center">
+            <span>THE NEXT</span>
+            <strong>CHAPTER</strong>
+          </div>
+
+        </div>
+
+      </section>
 
     </main>
   );
