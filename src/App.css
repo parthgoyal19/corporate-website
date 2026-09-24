@@ -4831,3 +4831,270 @@
     font-size: 44px;
   }
 }
+
+/* ========================================
+   OUR JOURNEY - PROFESSIONAL JOURNEY
+======================================== */
+
+.journey-career {
+  position: relative;
+  padding: 110px 70px 130px;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.journey-career-header {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto 90px;
+  display: grid;
+  grid-template-columns: 1fr 0.7fr;
+  gap: 100px;
+  align-items: end;
+}
+
+.journey-career .section-label {
+  margin-bottom: 22px;
+  color: #ff9800;
+}
+
+.journey-career-header h2 {
+  margin: 0;
+  color: #002f2f;
+  font-size: 56px;
+  line-height: 1.08;
+  font-weight: 600;
+  letter-spacing: -2px;
+}
+
+.journey-career-header h2 span {
+  display: block;
+  color: #ff9800;
+}
+
+.journey-career-intro {
+  max-width: 450px;
+  color: #5e6b6b;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+
+/* TIMELINE */
+
+.journey-career-timeline {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+.journey-career-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background-color: rgba(0, 47, 47, 0.15);
+  transform: translateX(-50%);
+}
+
+
+/* TIMELINE ITEM */
+
+.journey-career-item {
+  position: relative;
+  width: 50%;
+  min-height: 180px;
+  padding-right: 90px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.journey-career-item-right {
+  margin-left: 50%;
+  padding-right: 0;
+  padding-left: 90px;
+  justify-content: flex-start;
+}
+
+
+/* MARKER */
+
+.journey-career-marker {
+  position: absolute;
+  top: 20px;
+  right: -17px;
+  z-index: 3;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 47, 47, 0.22);
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.journey-career-item-right .journey-career-marker {
+  left: -17px;
+  right: auto;
+}
+
+.journey-career-marker span {
+  color: #002f2f;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+
+/* CONTENT */
+
+.journey-career-content {
+  position: relative;
+  max-width: 400px;
+  padding: 15px 0 35px;
+}
+
+.journey-career-item-right .journey-career-content {
+  text-align: left;
+}
+
+.journey-career-number {
+  display: block;
+  margin-bottom: 10px;
+  color: #ff9800;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.journey-career-content h3 {
+  margin: 0;
+  color: #002f2f;
+  font-size: 27px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.journey-career-content p {
+  max-width: 350px;
+  margin-top: 12px;
+  color: #6a7777;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+
+/* FINAL CAREER MARKER */
+
+.journey-career-marker-highlight {
+  width: 42px;
+  height: 42px;
+  right: -21px;
+  border-color: #ff9800;
+  background-color: #002f2f;
+}
+
+.journey-career-marker-highlight span {
+  color: #ff9800;
+}
+
+
+/* BACKGROUND DETAIL */
+
+.journey-career::before {
+  content: "";
+  position: absolute;
+  width: 460px;
+  height: 460px;
+  left: -300px;
+  top: 20%;
+  border: 1px solid rgba(0, 47, 47, 0.05);
+  border-radius: 50%;
+}
+
+.journey-career::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  right: -180px;
+  bottom: 5%;
+  border-radius: 50%;
+  background-color: rgba(255, 152, 0, 0.035);
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+  .journey-career {
+    padding: 90px 50px 110px;
+  }
+
+  .journey-career-header {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 70px;
+  }
+
+  .journey-career-header h2 {
+    font-size: 48px;
+  }
+
+}
+
+
+@media (max-width: 650px) {
+
+  .journey-career {
+    padding: 75px 24px 90px;
+  }
+
+  .journey-career-header {
+    margin-bottom: 55px;
+  }
+
+  .journey-career-header h2 {
+    font-size: 42px;
+    letter-spacing: -1.5px;
+  }
+
+  .journey-career-timeline {
+    padding-left: 35px;
+  }
+
+  .journey-career-line {
+    left: 16px;
+    transform: none;
+  }
+
+  .journey-career-item,
+  .journey-career-item-right {
+    width: 100%;
+    min-height: auto;
+    margin-left: 0;
+    padding: 0 0 45px 50px;
+    display: block;
+  }
+
+  .journey-career-marker,
+  .journey-career-item-right .journey-career-marker {
+    top: 5px;
+    left: 0;
+    right: auto;
+  }
+
+  .journey-career-marker-highlight {
+    left: -4px !important;
+  }
+
+  .journey-career-content {
+    max-width: none;
+    padding: 0;
+  }
+
+}
