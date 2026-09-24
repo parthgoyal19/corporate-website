@@ -6688,3 +6688,422 @@
     stroke-width: 4;
   }
 }
+
+/* =========================================
+   OUR JOURNEY — THE JOURNEY CONTINUES
+========================================= */
+
+.journey-continues {
+  position: relative;
+  min-height: 720px;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 80px;
+  padding: 110px 70px;
+  overflow: hidden;
+  background-color: #002f2f;
+}
+
+/* -----------------------------------------
+   CONTENT
+----------------------------------------- */
+
+.journey-continues-content {
+  position: relative;
+  z-index: 5;
+  max-width: 720px;
+}
+
+.journey-continues .section-label {
+  margin-bottom: 24px;
+  color: #ff9800;
+}
+
+.journey-continues-content h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 60px;
+  line-height: 1.06;
+  font-weight: 600;
+  letter-spacing: -2px;
+}
+
+.journey-continues-content h2 span {
+  display: block;
+  color: #ff9800;
+}
+
+.journey-continues-description {
+  max-width: 650px;
+  margin-top: 30px;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+
+/* -----------------------------------------
+   PRINCIPLES
+----------------------------------------- */
+
+.journey-continues-principles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 42px;
+  max-width: 680px;
+}
+
+.journey-continues-principle {
+  min-height: 145px;
+  padding: 22px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background-color: rgba(255, 255, 255, 0.035);
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.journey-continues-principle:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 152, 0, 0.42);
+  background-color: rgba(255, 152, 0, 0.07);
+}
+
+.journey-continues-principle span {
+  display: block;
+  margin-bottom: 20px;
+  color: #ff9800;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.journey-continues-principle strong {
+  display: block;
+  color: #ffffff;
+  font-size: 12px;
+  letter-spacing: 1.2px;
+}
+
+.journey-continues-principle p {
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.48);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+
+/* -----------------------------------------
+   CTA
+----------------------------------------- */
+
+.journey-continues-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 36px;
+  padding: 15px 24px;
+  border: 1px solid #ff9800;
+  color: #ffffff;
+  background-color: #ff9800;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.journey-continues-button:hover {
+  background-color: transparent;
+  color: #ff9800;
+  transform: translateY(-2px);
+}
+
+
+/* -----------------------------------------
+   RIGHT VISUAL
+----------------------------------------- */
+
+.journey-continues-visual {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.continues-orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.continues-orbit-one {
+  width: 480px;
+  height: 480px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.continues-orbit-two {
+  width: 345px;
+  height: 345px;
+  border: 1px dashed rgba(255, 152, 0, 0.3);
+}
+
+.continues-orbit-three {
+  width: 230px;
+  height: 230px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+
+/* -----------------------------------------
+   CENTER
+----------------------------------------- */
+
+.continues-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 4;
+  width: 175px;
+  height: 175px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: #ffffff;
+  text-align: center;
+
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.2);
+}
+
+.continues-center span {
+  color: #7b8888;
+  font-size: 9px;
+  letter-spacing: 2.5px;
+}
+
+.continues-center strong {
+  margin-top: 8px;
+  color: #002f2f;
+  font-size: 21px;
+  line-height: 1;
+  letter-spacing: 1px;
+}
+
+
+/* -----------------------------------------
+   ORBIT POINTS
+----------------------------------------- */
+
+.continues-point {
+  position: absolute;
+  z-index: 5;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: #ff9800;
+  box-shadow: 0 0 0 7px rgba(255, 152, 0, 0.08);
+}
+
+.continues-point-one {
+  top: 43px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.continues-point-two {
+  right: 42px;
+  bottom: 115px;
+}
+
+.continues-point-three {
+  left: 42px;
+  bottom: 115px;
+}
+
+
+/* -----------------------------------------
+   BACKGROUND DETAILS
+----------------------------------------- */
+
+.journey-continues::before {
+  content: "";
+  position: absolute;
+  width: 620px;
+  height: 620px;
+  right: -310px;
+  top: -310px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+}
+
+.journey-continues::after {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  left: -140px;
+  bottom: -140px;
+  border-radius: 50%;
+  background-color: rgba(255, 152, 0, 0.045);
+}
+
+
+/* -----------------------------------------
+   SUBTLE ORBIT MOTION
+----------------------------------------- */
+
+.continues-orbit-two {
+  animation: continuesOrbit 20s linear infinite;
+}
+
+@keyframes continuesOrbit {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+
+/* -----------------------------------------
+   TABLET
+----------------------------------------- */
+
+@media (max-width: 1000px) {
+
+  .journey-continues {
+    grid-template-columns: 1fr;
+    gap: 70px;
+    padding: 90px 50px 110px;
+  }
+
+  .journey-continues-content {
+    max-width: 760px;
+  }
+
+  .journey-continues-visual {
+    width: 450px;
+    height: 450px;
+  }
+
+  .continues-orbit-one {
+    width: 430px;
+    height: 430px;
+  }
+
+  .continues-orbit-two {
+    width: 310px;
+    height: 310px;
+  }
+
+  .continues-orbit-three {
+    width: 210px;
+    height: 210px;
+  }
+}
+
+
+/* -----------------------------------------
+   MOBILE
+----------------------------------------- */
+
+@media (max-width: 650px) {
+
+  .journey-continues {
+    gap: 55px;
+    padding: 75px 24px 90px;
+  }
+
+  .journey-continues-content h2 {
+    font-size: 44px;
+    letter-spacing: -1.5px;
+  }
+
+  .journey-continues-description {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+
+  .journey-continues-principles {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 35px;
+  }
+
+  .journey-continues-principle {
+    min-height: auto;
+    padding: 20px;
+  }
+
+  .journey-continues-button {
+    margin-top: 30px;
+  }
+
+  .journey-continues-visual {
+    width: 320px;
+    height: 320px;
+  }
+
+  .continues-orbit-one {
+    width: 305px;
+    height: 305px;
+  }
+
+  .continues-orbit-two {
+    width: 220px;
+    height: 220px;
+  }
+
+  .continues-orbit-three {
+    width: 145px;
+    height: 145px;
+  }
+
+  .continues-center {
+    width: 120px;
+    height: 120px;
+  }
+
+  .continues-center span {
+    font-size: 7px;
+  }
+
+  .continues-center strong {
+    font-size: 15px;
+  }
+
+  .continues-point {
+    width: 8px;
+    height: 8px;
+  }
+
+  .continues-point-one {
+    top: 25px;
+  }
+
+  .continues-point-two {
+    right: 25px;
+    bottom: 75px;
+  }
+
+  .continues-point-three {
+    left: 25px;
+    bottom: 75px;
+  }
+}

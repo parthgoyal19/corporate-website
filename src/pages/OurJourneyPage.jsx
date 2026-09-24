@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 function OurJourneyPage() {
   return (
     <main className="our-journey-page">
@@ -447,6 +448,75 @@ function OurJourneyPage() {
               to a vision for the future.
             </strong>
           </div>
+
+        </div>
+
+      </section>
+      <section className="journey-continues">
+
+        <div className="journey-continues-content">
+
+          <p className="section-label">
+            THE JOURNEY CONTINUES
+          </p>
+
+          <h2>
+            The experience came before.
+            <span>The purpose continues.</span>
+          </h2>
+
+          <p className="journey-continues-description">
+            Mutual Growth is the next chapter of that journey — built on
+            experience, shaped by perspective and focused on helping
+            individuals approach their financial lives with greater clarity,
+            discipline and long-term thinking.
+          </p>
+
+          <div className="journey-continues-principles">
+
+            <div className="journey-continues-principle">
+              <span>01</span>
+              <strong>UNDERSTAND</strong>
+              <p>Know your financial picture.</p>
+            </div>
+
+            <div className="journey-continues-principle">
+              <span>02</span>
+              <strong>DISCIPLINE</strong>
+              <p>Stay consistent with your purpose.</p>
+            </div>
+
+            <div className="journey-continues-principle">
+              <span>03</span>
+              <strong>LONG-TERM</strong>
+              <p>Keep the bigger picture in focus.</p>
+            </div>
+
+          </div>
+
+          <Link
+            to="/contact"
+            className="journey-continues-button"
+          >
+            Start a Conversation →
+          </Link>
+
+        </div>
+
+        <div className="journey-continues-visual">
+
+          <div className="continues-orbit continues-orbit-one"></div>
+          <div className="continues-orbit continues-orbit-two"></div>
+          <div className="continues-orbit continues-orbit-three"></div>
+
+          <div className="continues-center">
+            <span>KEEP MONEY</span>
+            <strong>@ WORK</strong>
+          </div>
+
+          <div className="continues-point continues-point-one"></div>
+          <div className="continues-point continues-point-two"></div>
+          <div className="continues-point continues-point-three"></div>
 
         </div>
 
