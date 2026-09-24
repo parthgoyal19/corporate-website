@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 function About() {
     return (
         <main className="about-page">
@@ -286,6 +287,25 @@ function About() {
                             evolve.
                         </p>
                     </div>
+                </div>
+            </section>
+            <section className="about-final-cta">
+                <div className="about-final-cta-content">
+                    <p className="section-label">START THE CONVERSATION</p>
+
+                    <h2>
+                        Let's build your
+                        <span>financial journey with clarity.</span>
+                    </h2>
+
+                    <p>
+                        Every financial journey starts with understanding where
+                        you are today. Let's begin there.
+                    </p>
+
+                    <Link to="/contact" className="about-final-cta-button">
+                        Start a Conversation →
+                    </Link>
                 </div>
             </section>
         </main>

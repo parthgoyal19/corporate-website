@@ -3218,3 +3218,102 @@
     margin-bottom: 25px;
   }
 }
+
+/* =========================
+   ABOUT PAGE - FINAL CTA
+   ========================= */
+
+.about-final-cta {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 430px;
+  padding: 90px 60px;
+  overflow: hidden;
+  background-color: #002f2f;
+  text-align: center;
+}
+
+.about-final-cta-content {
+  position: relative;
+  z-index: 2;
+  max-width: 850px;
+}
+
+.about-final-cta .section-label {
+  margin-bottom: 22px;
+  color: #ff9800;
+}
+
+.about-final-cta h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 52px;
+  line-height: 1.08;
+  font-weight: 600;
+  letter-spacing: -1.5px;
+}
+
+.about-final-cta h2 span {
+  display: block;
+  color: #ff9800;
+}
+
+.about-final-cta p:not(.section-label) {
+  max-width: 620px;
+  margin: 24px auto 0;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.about-final-cta-button {
+  display: inline-block;
+  margin-top: 32px;
+  padding: 15px 26px;
+  background-color: #ff9800;
+  color: #002f2f;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.about-final-cta-button:hover {
+  transform: translateY(-2px);
+  background-color: #ffffff;
+}
+
+
+/* =========================
+   ABOUT PAGE - FINAL CTA
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 900px) {
+  .about-final-cta {
+    min-height: 400px;
+    padding: 80px 40px;
+  }
+
+  .about-final-cta h2 {
+    font-size: 44px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-final-cta {
+    min-height: 380px;
+    padding: 70px 24px;
+  }
+
+  .about-final-cta h2 {
+    font-size: 38px;
+    letter-spacing: -1px;
+  }
+
+  .about-final-cta p:not(.section-label) {
+    font-size: 16px;
+  }
+}
