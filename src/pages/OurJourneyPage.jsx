@@ -364,6 +364,82 @@ function OurJourneyPage() {
         </div>
 
       </section>
+      <section className="journey-founding">
+
+        <div className="journey-founding-visual">
+
+          <div className="founding-grid"></div>
+
+          <div className="founding-circle founding-circle-one"></div>
+          <div className="founding-circle founding-circle-two"></div>
+
+          <div className="founding-chart">
+
+            <div className="founding-chart-label">
+              <span>THE BEGINNING</span>
+              <strong>2024</strong>
+            </div>
+
+            <div className="founding-chart-line">
+              <span className="chart-point chart-point-one"></span>
+              <span className="chart-point chart-point-two"></span>
+              <span className="chart-point chart-point-three"></span>
+              <span className="chart-point chart-point-four"></span>
+              <span className="chart-point chart-point-five"></span>
+            </div>
+
+            <div className="founding-chart-base">
+              <span>EXPERIENCE</span>
+              <span>VISION</span>
+              <span>MUTUAL GROWTH</span>
+            </div>
+
+          </div>
+
+          <div className="founding-date-card">
+            <span>FOUNDED</span>
+            <strong>AUG</strong>
+            <b>2024</b>
+          </div>
+
+        </div>
+
+
+        <div className="journey-founding-content">
+
+          <p className="section-label">
+            AUGUST 2024
+          </p>
+
+          <h2>
+            A new chapter
+            <span>began.</span>
+          </h2>
+
+          <p className="journey-founding-description">
+            Mutual Growth was founded in August 2024 with a vision to bring
+            a broader perspective to financial planning — one that looks
+            beyond individual products and considers the larger financial
+            picture.
+          </p>
+
+          <p className="journey-founding-description">
+            The journey that came before became the foundation.
+            The chapter ahead became the opportunity to build something
+            with a long-term purpose.
+          </p>
+
+          <div className="journey-founding-statement">
+            <span>KEEP MONEY @ WORK</span>
+            <strong>
+              From years of experience
+              to a vision for the future.
+            </strong>
+          </div>
+
+        </div>
+
+      </section>
 
     </main>
   );
