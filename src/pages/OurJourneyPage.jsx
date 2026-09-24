@@ -284,6 +284,86 @@ function OurJourneyPage() {
         </div>
 
       </section>
+      <section className="journey-perspective">
+
+        <div className="journey-perspective-visual">
+
+          <div className="perspective-orbit perspective-orbit-outer"></div>
+          <div className="perspective-orbit perspective-orbit-middle"></div>
+
+          <div className="perspective-center">
+            <span>YOUR</span>
+            <strong>FINANCIAL<br />LIFE</strong>
+          </div>
+
+          <div className="perspective-node perspective-node-one">
+            <span>01</span>
+            <strong>UNDERSTAND</strong>
+          </div>
+
+          <div className="perspective-node perspective-node-two">
+            <span>02</span>
+            <strong>PLAN</strong>
+          </div>
+
+          <div className="perspective-node perspective-node-three">
+            <span>03</span>
+            <strong>PROTECT</strong>
+          </div>
+
+          <div className="perspective-node perspective-node-four">
+            <span>04</span>
+            <strong>INVEST</strong>
+          </div>
+
+          <div className="perspective-node perspective-node-five">
+            <span>05</span>
+            <strong>GROW</strong>
+          </div>
+
+          <div className="perspective-node perspective-node-six">
+            <span>06</span>
+            <strong>PRESERVE</strong>
+          </div>
+
+        </div>
+
+
+        <div className="journey-perspective-content">
+
+          <p className="section-label">
+            THE MUTUAL GROWTH PERSPECTIVE
+          </p>
+
+          <h2>
+            Experience changes
+            <span>the way you see money.</span>
+          </h2>
+
+          <p className="journey-perspective-description">
+            Years spent across different parts of the financial services
+            industry bring more than product knowledge. They bring
+            perspective — an understanding that financial decisions are
+            connected to one another.
+          </p>
+
+          <p className="journey-perspective-description">
+            That perspective became one of the foundations of Mutual Growth:
+            looking beyond individual investments and understanding the
+            larger financial picture of an individual.
+          </p>
+
+          <div className="journey-perspective-note">
+            <span>THE IDEA</span>
+            <strong>
+              Financial planning is not about one decision.
+              It is about how the decisions connect.
+            </strong>
+          </div>
+
+        </div>
+
+      </section>
 
     </main>
   );
