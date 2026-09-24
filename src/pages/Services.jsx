@@ -403,6 +403,65 @@ function Services() {
         </div>
 
       </section>
+      <section className="services-connected">
+        <div className="services-connected-content">
+
+          <p className="section-label">
+            THE BIGGER PICTURE
+          </p>
+
+          <h2>
+            Your financial decisions
+            <span>are connected.</span>
+          </h2>
+
+          <p className="services-connected-description">
+            A financial goal does not exist in isolation. The way you
+            manage cash flow, protect what matters, invest for your
+            goals and plan for the future all form part of one bigger
+            financial picture.
+          </p>
+
+          <p className="services-connected-note">
+            That is why financial planning starts with understanding
+            the whole picture.
+          </p>
+
+        </div>
+
+        <div className="services-connected-visual">
+
+          <div className="connected-line connected-line-one"></div>
+          <div className="connected-line connected-line-two"></div>
+          <div className="connected-line connected-line-three"></div>
+
+          <div className="connected-node connected-node-goals">
+            <span>01</span>
+            <strong>GOALS</strong>
+          </div>
+
+          <div className="connected-node connected-node-protection">
+            <span>02</span>
+            <strong>PROTECTION</strong>
+          </div>
+
+          <div className="connected-node connected-node-investments">
+            <span>03</span>
+            <strong>INVESTMENTS</strong>
+          </div>
+
+          <div className="connected-node connected-node-future">
+            <span>04</span>
+            <strong>FUTURE</strong>
+          </div>
+
+          <div className="connected-center">
+            <span>ONE</span>
+            <strong>FINANCIAL<br />PLAN</strong>
+          </div>
+
+        </div>
+      </section>
 
     </main>
   );

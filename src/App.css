@@ -4212,3 +4212,262 @@
   }
 
 }
+
+/* ========================================
+   SERVICES - CONNECTED FINANCIAL PLANNING
+======================================== */
+
+.services-connected {
+  position: relative;
+  min-height: 680px;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+  gap: 80px;
+  padding: 110px 70px;
+  overflow: hidden;
+  background-color: #f7f6f2;
+}
+
+.services-connected-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+}
+
+.services-connected .section-label {
+  margin-bottom: 24px;
+  color: #ff9800;
+}
+
+.services-connected h2 {
+  margin: 0;
+  color: #002f2f;
+  font-size: 58px;
+  line-height: 1.08;
+  font-weight: 600;
+  letter-spacing: -2px;
+}
+
+.services-connected h2 span {
+  display: block;
+  color: #ff9800;
+}
+
+.services-connected-description {
+  max-width: 560px;
+  margin-top: 30px;
+  color: #5e6b6b;
+  font-size: 17px;
+  line-height: 1.85;
+}
+
+.services-connected-note {
+  max-width: 520px;
+  margin-top: 22px;
+  padding-left: 18px;
+  border-left: 2px solid #ff9800;
+  color: #002f2f;
+  font-size: 15px;
+  line-height: 1.7;
+  font-weight: 500;
+}
+
+
+/* VISUAL */
+
+.services-connected-visual {
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* CENTRAL NODE */
+
+.connected-center {
+  position: relative;
+  z-index: 5;
+  width: 170px;
+  height: 170px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #002f2f;
+  color: #ffffff;
+  text-align: center;
+  box-shadow: 0 25px 60px rgba(0, 47, 47, 0.18);
+}
+
+.connected-center span {
+  margin-bottom: 7px;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.connected-center strong {
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 1px;
+}
+
+
+/* SURROUNDING NODES */
+
+.connected-node {
+  position: absolute;
+  z-index: 4;
+  min-width: 145px;
+  padding: 15px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 47, 47, 0.09);
+  box-shadow: 0 18px 40px rgba(0, 47, 47, 0.09);
+}
+
+.connected-node span {
+  color: #ff9800;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+}
+
+.connected-node strong {
+  color: #002f2f;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+
+/* NODE POSITIONS */
+
+.connected-node-goals {
+  top: 8%;
+  left: 38%;
+}
+
+.connected-node-protection {
+  top: 42%;
+  left: 3%;
+}
+
+.connected-node-investments {
+  top: 42%;
+  right: 3%;
+}
+
+.connected-node-future {
+  bottom: 8%;
+  left: 38%;
+}
+
+
+/* CONNECTION LINES */
+
+.connected-line {
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(0, 47, 47, 0.16);
+  transform-origin: center;
+}
+
+.connected-line-one {
+  width: 1px;
+  height: 145px;
+  top: 24%;
+  left: 50%;
+}
+
+.connected-line-two {
+  width: 170px;
+  height: 1px;
+  top: 50%;
+  left: 29%;
+}
+
+.connected-line-three {
+  width: 1px;
+  height: 145px;
+  bottom: 24%;
+  left: 50%;
+}
+
+
+/* SUBTLE BACKGROUND DETAIL */
+
+.services-connected::before {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  right: -170px;
+  top: -170px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 47, 47, 0.08);
+}
+
+.services-connected::after {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  left: -130px;
+  bottom: -130px;
+  border-radius: 50%;
+  background-color: rgba(255, 152, 0, 0.035);
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+
+  .services-connected {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    padding: 90px 50px;
+  }
+
+  .services-connected-content {
+    max-width: 760px;
+  }
+
+  .services-connected-visual {
+    min-height: 460px;
+  }
+
+}
+
+
+@media (max-width: 650px) {
+
+  .services-connected {
+    padding: 75px 24px;
+  }
+
+  .services-connected h2 {
+    font-size: 44px;
+    letter-spacing: -1.5px;
+  }
+
+  .services-connected-description {
+    font-size: 16px;
+  }
+
+  .services-connected-visual {
+    min-height: 390px;
+    transform: scale(0.82);
+    transform-origin: center;
+    margin-top: -25px;
+    margin-bottom: -25px;
+  }
+
+}
