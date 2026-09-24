@@ -6460,3 +6460,231 @@
     padding: 20px;
   }
 }
+
+/* =========================================
+   FOUNDING MOMENT — VISUAL REFINEMENT
+========================================= */
+
+/* Make the visual system slightly more readable */
+.founding-grid {
+  background-image:
+    linear-gradient(rgba(0, 47, 47, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 47, 47, 0.07) 1px, transparent 1px);
+}
+
+.founding-circle-one {
+  border-color: rgba(0, 47, 47, 0.12);
+}
+
+.founding-circle-two {
+  border-color: rgba(255, 152, 0, 0.48);
+}
+
+
+/* -----------------------------------------
+   CLEANER GROWTH GRAPH
+----------------------------------------- */
+
+.founding-chart-line {
+  width: 330px;
+  height: 150px;
+}
+
+/* Replace the broken gradient effect with
+   one clean upward-moving visual line */
+.founding-chart-line::before {
+  background: #ff9800;
+
+  clip-path: polygon(
+    0 91%,
+    20% 73%,
+    40% 58%,
+    60% 43%,
+    80% 24%,
+    100% 5%,
+    100% 9%,
+    80% 29%,
+    60% 48%,
+    40% 63%,
+    20% 78%,
+    0 96%
+  );
+}
+
+
+/* Make the graph points easier to see */
+.chart-point {
+  width: 10px;
+  height: 10px;
+  background-color: #ff9800;
+  box-shadow: 0 0 0 6px rgba(255, 152, 0, 0.10);
+}
+
+
+/* -----------------------------------------
+   GRAPH LABELS
+----------------------------------------- */
+
+.founding-chart-base {
+  width: 300px;
+  bottom: 108px;
+  gap: 8px;
+}
+
+.founding-chart-base span {
+  flex: 1;
+  text-align: center;
+  color: #627070;
+  font-size: 8px;
+  font-weight: 500;
+  letter-spacing: 1.4px;
+  white-space: nowrap;
+}
+
+
+/* -----------------------------------------
+   MOVE DATE CARD OUT OF THE GRAPH
+----------------------------------------- */
+
+.founding-date-card {
+  right: -80px;
+  bottom: 35px;
+  z-index: 8;
+}
+
+
+/* -----------------------------------------
+   SLIGHTLY STRONGER GRAPH HEADING
+----------------------------------------- */
+
+.founding-chart-label span {
+  color: #657272;
+}
+
+.founding-chart-label strong {
+  color: #002f2f;
+}
+
+
+/* -----------------------------------------
+   TABLET
+----------------------------------------- */
+
+@media (max-width: 1000px) {
+
+  .founding-chart-line {
+    width: 290px;
+    height: 135px;
+  }
+
+  .founding-chart-base {
+    width: 270px;
+    bottom: 98px;
+  }
+
+  .founding-date-card {
+    right: -55px;
+    bottom: 25px;
+  }
+}
+
+
+/* -----------------------------------------
+   MOBILE
+----------------------------------------- */
+
+@media (max-width: 650px) {
+
+  .founding-chart-line {
+    width: 190px;
+    height: 90px;
+  }
+
+  .founding-chart-base {
+    width: 190px;
+    bottom: 68px;
+    gap: 4px;
+  }
+
+  .founding-chart-base span {
+    font-size: 5.5px;
+    letter-spacing: 1px;
+  }
+
+  .founding-date-card {
+    right: -5px;
+    bottom: 18px;
+  }
+}
+
+/* =========================================
+   FOUNDING MOMENT — FINAL VISUAL TUNING
+========================================= */
+
+/* Slightly stronger circles */
+.founding-circle-one {
+  border-color: rgba(0, 47, 47, 0.16);
+}
+
+.founding-circle-two {
+  border-color: rgba(255, 152, 0, 0.55);
+}
+
+
+/* Stronger bottom labels */
+.founding-chart-base span {
+  color: #536363;
+  font-size: 8.5px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+
+
+/* Curve container */
+.founding-chart-line {
+  overflow: visible;
+}
+
+/* Remove the old straight CSS graph */
+.founding-chart-line::before {
+  display: none;
+}
+
+
+/* Smooth upward curve */
+.founding-chart-curve {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.founding-chart-curve path {
+  fill: none;
+  stroke: #ff9800;
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* Keep points visually connected to the curve */
+.chart-point {
+  width: 9px;
+  height: 9px;
+}
+
+
+/* Mobile */
+@media (max-width: 650px) {
+
+  .founding-chart-base span {
+    font-size: 6px;
+    letter-spacing: 1px;
+  }
+
+  .founding-chart-curve path {
+    stroke-width: 4;
+  }
+}

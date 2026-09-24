@@ -381,11 +381,22 @@ function OurJourneyPage() {
             </div>
 
             <div className="founding-chart-line">
+
+              <svg
+                className="founding-chart-curve"
+                viewBox="0 0 330 150"
+                preserveAspectRatio="none"
+                aria-hidden="true"
+              >
+                <path d="M 0 128 C 55 116, 95 105, 130 92 C 170 77, 205 62, 235 45 C 270 27, 300 15, 330 5" />
+              </svg>
+
               <span className="chart-point chart-point-one"></span>
               <span className="chart-point chart-point-two"></span>
               <span className="chart-point chart-point-three"></span>
               <span className="chart-point chart-point-four"></span>
               <span className="chart-point chart-point-five"></span>
+
             </div>
 
             <div className="founding-chart-base">
