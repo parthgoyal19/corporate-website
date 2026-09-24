@@ -434,6 +434,7 @@ function Services() {
           <div className="connected-line connected-line-one"></div>
           <div className="connected-line connected-line-two"></div>
           <div className="connected-line connected-line-three"></div>
+          <div className="connected-line connected-line-four"></div>
 
           <div className="connected-node connected-node-goals">
             <span>01</span>

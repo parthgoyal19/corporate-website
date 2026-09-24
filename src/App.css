@@ -4400,6 +4400,13 @@
   left: 50%;
 }
 
+.connected-line-four {
+  width: 110px;
+  height: 1px;
+  top: 50%;
+  left: calc(50% + 85px);
+}
+
 
 /* SUBTLE BACKGROUND DETAIL */
 
