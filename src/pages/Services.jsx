@@ -97,13 +97,13 @@ const services = [
 ];
 
 function Services() {
-  const [activeService, setActiveService] = useState(0);
+  const [activeService, setActiveService] = useState(null);
   const [openCategory, setOpenCategory] = useState(null);
 
   const currentService = services[activeService];
 
   const handleServiceChange = (index) => {
-    setActiveService(index);
+    setActiveService(activeService === index ? null : index);
     setOpenCategory(null);
   };
 
@@ -181,60 +181,60 @@ function Services() {
 
           <div className="services-sticky-visual">
 
-            <p className="section-label">
-              FINANCIAL PLANNING
-            </p>
+            <div className="services-visual-heading">
+              <p className="section-label">
+                FINANCIAL PLANNING
+              </p>
 
-            <h2>
-              One financial life.
-              <span>Many decisions.</span>
-            </h2>
+              <h2>
+                Different decisions.
+                <span>One bigger picture.</span>
+              </h2>
 
-            <p className="services-visual-description">
-              Your financial needs change across different stages
-              of life. Explore the areas where thoughtful planning
-              can help bring these decisions together.
-            </p>
+              <p className="services-visual-description">
+                Your financial life is made up of many decisions.
+                The right approach is to understand how they connect
+                rather than look at each one in isolation.
+              </p>
+            </div>
 
-            <div className="services-visual-path">
 
-              <div className="services-path-item active">
+            <div className="services-financial-graphic">
+
+              <div className="finance-graphic-orbit finance-orbit-one"></div>
+              <div className="finance-graphic-orbit finance-orbit-two"></div>
+
+              <div className="finance-graphic-center">
+                <span>YOUR</span>
+                <strong>FINANCIAL<br />LIFE</strong>
+              </div>
+
+              <div className="finance-graphic-card finance-card-top">
                 <span>01</span>
-                <strong>UNDERSTAND</strong>
+                <strong>GOALS</strong>
               </div>
 
-              <div className="services-path-line"></div>
-
-              <div className="services-path-item">
+              <div className="finance-graphic-card finance-card-right">
                 <span>02</span>
-                <strong>PLAN</strong>
+                <strong>PROTECTION</strong>
               </div>
 
-              <div className="services-path-line"></div>
-
-              <div className="services-path-item">
+              <div className="finance-graphic-card finance-card-bottom">
                 <span>03</span>
-                <strong>PROTECT</strong>
+                <strong>INVESTMENTS</strong>
               </div>
 
-              <div className="services-path-line"></div>
-
-              <div className="services-path-item">
+              <div className="finance-graphic-card finance-card-left">
                 <span>04</span>
-                <strong>INVEST</strong>
-              </div>
-
-              <div className="services-path-line"></div>
-
-              <div className="services-path-item">
-                <span>05</span>
-                <strong>PRESERVE</strong>
+                <strong>FUTURE</strong>
               </div>
 
             </div>
 
-            <div className="services-visual-note">
-              <span>KEEP MONEY @ WORK</span>
+
+            <div className="services-visual-footer">
+              <span>09</span>
+              <p>AREAS OF FINANCIAL PLANNING</p>
             </div>
 
           </div>
@@ -249,9 +249,14 @@ function Services() {
               EXPLORE OUR SERVICES
             </p>
 
+            <h2>
+              Choose what you want
+              <span>to plan for.</span>
+            </h2>
+
             <p>
-              Select an area to understand how it fits into your
-              broader financial journey.
+              Explore each area individually and see how it can fit
+              into your broader financial journey.
             </p>
           </div>
 
@@ -259,38 +264,44 @@ function Services() {
           <div className="services-accordion">
 
             {services.map((service, index) => {
+
               const isActive = activeService === index;
 
               return (
                 <div
-                  className={`service-item ${
-                    isActive ? "active" : ""
-                  }`}
+                  className={`service-item ${isActive ? "active" : ""
+                    }`}
                   key={service.title}
                 >
 
                   <button
                     className="service-item-trigger"
                     onClick={() => handleServiceChange(index)}
+                    aria-expanded={isActive}
                   >
+
                     <div className="service-item-title">
+
                       <span>
                         {String(index + 1).padStart(2, "0")}
                       </span>
 
-                      <h3>{service.title}</h3>
+                      <h3>
+                        {service.title}
+                      </h3>
+
                     </div>
 
                     <div className="service-item-icon">
                       {isActive ? "−" : "+"}
                     </div>
+
                   </button>
 
 
                   <div
-                    className={`service-item-content ${
-                      isActive ? "open" : ""
-                    }`}
+                    className={`service-item-content ${isActive ? "open" : ""
+                      }`}
                   >
 
                     <p>
@@ -313,12 +324,6 @@ function Services() {
                                   className="service-subcategory-simple"
                                   key={subcategory}
                                 >
-                                  <span>
-                                    {String(
-                                      subIndex + 1
-                                    ).padStart(2, "0")}
-                                  </span>
-
                                   <strong>
                                     {subcategory}
                                   </strong>
@@ -326,17 +331,16 @@ function Services() {
                               );
                             }
 
+
                             const categoryOpen =
                               openCategory ===
                               `${index}-${subIndex}`;
 
+
                             return (
                               <div
-                                className={`service-nested-category ${
-                                  categoryOpen
-                                    ? "open"
-                                    : ""
-                                }`}
+                                className={`service-nested-category ${categoryOpen ? "open" : ""
+                                  }`}
                                 key={subcategory.title}
                               >
 
@@ -349,22 +353,17 @@ function Services() {
                                         : `${index}-${subIndex}`
                                     )
                                   }
+                                  aria-expanded={categoryOpen}
                                 >
-                                  <span>
-                                    {String(
-                                      subIndex + 1
-                                    ).padStart(2, "0")}
-                                  </span>
 
                                   <strong>
                                     {subcategory.title}
                                   </strong>
 
                                   <b>
-                                    {categoryOpen
-                                      ? "−"
-                                      : "+"}
+                                    {categoryOpen ? "−" : "+"}
                                   </b>
+
                                 </button>
 
 
@@ -372,17 +371,11 @@ function Services() {
                                   <div className="service-nested-children">
 
                                     {subcategory.children.map(
-                                      (child, childIndex) => (
+                                      (child) => (
                                         <div
                                           className="service-nested-child"
                                           key={child}
                                         >
-                                          <span>
-                                            {String(
-                                              childIndex + 1
-                                            ).padStart(2, "0")}
-                                          </span>
-
                                           <p>{child}</p>
                                         </div>
                                       )
