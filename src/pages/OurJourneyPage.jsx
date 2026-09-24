@@ -190,7 +190,6 @@ function OurJourneyPage() {
           <div className="journey-next-chapter-transition">
 
             <div className="journey-transition-step">
-              <span>01</span>
               <strong>ITI MF</strong>
               <p>Assistant Vice President</p>
             </div>
@@ -200,7 +199,6 @@ function OurJourneyPage() {
             </div>
 
             <div className="journey-transition-step journey-transition-highlight">
-              <span>02</span>
               <strong>MUTUAL GROWTH</strong>
               <p>Founded August 2024</p>
             </div>
@@ -218,6 +216,69 @@ function OurJourneyPage() {
           <div className="journey-growth-center">
             <span>THE NEXT</span>
             <strong>CHAPTER</strong>
+          </div>
+
+        </div>
+
+      </section>
+      <section className="journey-present">
+
+        <div className="journey-present-header">
+
+          <p className="section-label">
+            MUTUAL GROWTH TODAY
+          </p>
+
+          <h2>
+            Experience became
+            <span>a new perspective.</span>
+          </h2>
+
+          <p className="journey-present-intro">
+            Mutual Growth brings together years of financial-services
+            experience with a broader approach to financial planning —
+            helping individuals understand their money, plan with purpose
+            and think beyond individual investments.
+          </p>
+
+        </div>
+
+        <div className="journey-present-grid">
+
+          <div className="journey-present-card">
+            <span>01</span>
+            <h3>Financial Clarity</h3>
+            <p>
+              Making financial decisions easier to understand through
+              a structured approach to money and planning.
+            </p>
+          </div>
+
+          <div className="journey-present-card">
+            <span>02</span>
+            <h3>Discipline</h3>
+            <p>
+              Encouraging consistency and thoughtful financial decisions
+              rather than short-term reactions.
+            </p>
+          </div>
+
+          <div className="journey-present-card">
+            <span>03</span>
+            <h3>Long-Term Thinking</h3>
+            <p>
+              Keeping the focus on meaningful financial goals and
+              building wealth over time.
+            </p>
+          </div>
+
+          <div className="journey-present-card journey-present-card-highlight">
+            <span>04</span>
+            <h3>One Bigger Picture</h3>
+            <p>
+              Bringing different aspects of financial planning together
+              instead of looking at every financial decision in isolation.
+            </p>
           </div>
 
         </div>
