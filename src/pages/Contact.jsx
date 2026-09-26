@@ -215,6 +215,92 @@ function Contact() {
         </div>
 
       </section>
+      {/* Location */}
+      <section className="contact-location">
+
+        <div className="contact-location-content">
+          <p className="section-label">FIND US</p>
+
+          <h2>
+            Let's meet
+            <span>in Indore.</span>
+          </h2>
+
+          <p>
+            Our office is located in New Palasia, Indore.
+            If you'd like to meet and discuss your financial journey,
+            we'd be happy to have a conversation.
+          </p>
+
+          <div className="contact-location-address">
+            <strong>Mutual Growth</strong>
+            <p>
+              108 Gold Arcade,<br />
+              New Palasia,<br />
+              Indore (M.P.) - 452001
+            </p>
+          </div>
+
+          <div className="contact-location-hours">
+            <span>WORKING HOURS</span>
+            <strong>Monday – Saturday · 10:00 AM – 7:00 PM</strong>
+          </div>
+        </div>
+
+        <div className="contact-location-visual">
+
+          <div className="location-grid"></div>
+
+          <div className="location-ring location-ring-one"></div>
+          <div className="location-ring location-ring-two"></div>
+
+          <div className="location-pin">
+            <span></span>
+          </div>
+
+          <div className="location-card">
+            <span>INDORE</span>
+            <strong>NEW PALASIA</strong>
+          </div>
+
+          <div className="location-coordinate">
+            MUTUAL GROWTH
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* Closing CTA */}
+      <section className="contact-closing">
+
+        <div className="contact-closing-content">
+          <p className="section-label">YOUR NEXT STEP</p>
+
+          <h2>
+            Start with clarity.
+            <span>Build with purpose.</span>
+          </h2>
+
+          <p>
+            Your financial journey doesn't need to begin with all
+            the answers. It can begin with the right conversation.
+          </p>
+
+          <a
+            href="mailto:path2mutualgrowth@gmail.com"
+            className="contact-closing-button"
+          >
+            Start a Conversation →
+          </a>
+        </div>
+
+        <div className="contact-closing-mark">
+          <span>KEEP MONEY</span>
+          <strong>@ WORK</strong>
+        </div>
+
+      </section>
 
     </main>
   );
