@@ -1,4 +1,107 @@
+import { useState } from "react";
+
 function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    interest: "",
+    message: "",
+  });
+
+  const [formStatus, setFormStatus] = useState({
+    type: "",
+    message: "",
+  });
+
+  const handleChange = (event) => {
+    const { id, value } = event.target;
+
+    setFormData((previous) => ({
+      ...previous,
+      [id]: value,
+    }));
+
+    if (formStatus.message) {
+      setFormStatus({
+        type: "",
+        message: "",
+      });
+    }
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    if (!formData.name.trim()) {
+      setFormStatus({
+        type: "error",
+        message: "Please enter your name.",
+      });
+      return;
+    }
+
+    if (!formData.email.trim()) {
+      setFormStatus({
+        type: "error",
+        message: "Please enter your email address.",
+      });
+      return;
+    }
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      setFormStatus({
+        type: "error",
+        message: "Please enter a valid email address.",
+      });
+      return;
+    }
+
+    if (!formData.phone.trim()) {
+      setFormStatus({
+        type: "error",
+        message: "Please enter your phone number.",
+      });
+      return;
+    }
+
+    if (!/^[0-9+\-\s()]{10,15}$/.test(formData.phone.trim())) {
+      setFormStatus({
+        type: "error",
+        message: "Please enter a valid phone number.",
+      });
+      return;
+    }
+
+    if (!formData.interest) {
+      setFormStatus({
+        type: "error",
+        message: "Please select what you'd like to discuss.",
+      });
+      return;
+    }
+
+    if (!formData.message.trim()) {
+      setFormStatus({
+        type: "error",
+        message: "Please enter a message.",
+      });
+      return;
+    }
+
+    setFormStatus({
+      type: "success",
+      message: "Your enquiry has been captured successfully.",
+    });
+
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      interest: "",
+      message: "",
+    });
+  };
   return (
     <main className="contact-page">
 
@@ -118,7 +221,7 @@ function Contact() {
             <h3>Tell us how we can help.</h3>
           </div>
 
-          <form className="contact-form">
+          <form className="contact-form" onSubmit={handleSubmit}>
 
             <div className="contact-form-row">
 
@@ -128,6 +231,8 @@ function Contact() {
                   id="name"
                   type="text"
                   placeholder="Enter your name"
+                  value={formData.name}
+                  onChange={handleChange}
                 />
               </div>
 
@@ -137,6 +242,8 @@ function Contact() {
                   id="email"
                   type="email"
                   placeholder="Enter your email"
+                  value={formData.email}
+                  onChange={handleChange}
                 />
               </div>
 
@@ -150,13 +257,19 @@ function Contact() {
                   id="phone"
                   type="tel"
                   placeholder="Enter your phone number"
+                  value={formData.phone}
+                  onChange={handleChange}
                 />
               </div>
 
               <div className="contact-form-group">
                 <label htmlFor="interest">I'm interested in</label>
 
-                <select id="interest" defaultValue="">
+                <select
+                  id="interest"
+                  value={formData.interest}
+                  onChange={handleChange}
+                >
                   <option value="" disabled>
                     Select an option
                   </option>
@@ -200,8 +313,19 @@ function Contact() {
                 id="message"
                 rows="6"
                 placeholder="Tell us a little about what you'd like to discuss..."
+                value={formData.message}
+                onChange={handleChange}
               ></textarea>
             </div>
+
+            {formStatus.message && (
+              <p
+                className={`contact-form-status ${formStatus.type}`}
+                role="status"
+              >
+                {formStatus.message}
+              </p>
+            )}
 
             <button
               type="submit"

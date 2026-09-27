@@ -8306,3 +8306,24 @@
     height: 170px;
   }
 }
+
+/* Contact form status */
+
+.contact-form-status {
+  margin-top: 22px;
+  padding: 12px 15px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.contact-form-status.error {
+  background-color: #fff3f0;
+  border-left: 3px solid #c75b4c;
+  color: #8a3328;
+}
+
+.contact-form-status.success {
+  background-color: #edf5f2;
+  border-left: 3px solid #2f6f63;
+  color: #24564e;
+}
