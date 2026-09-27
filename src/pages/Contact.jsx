@@ -30,7 +30,7 @@ function Contact() {
     }
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
     if (!formData.name.trim()) {
@@ -90,17 +90,46 @@ function Contact() {
     }
 
     setFormStatus({
-      type: "success",
-      message: "Your enquiry has been captured successfully.",
-    });
-
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      interest: "",
+      type: "",
       message: "",
     });
+
+    try {
+      const response = await fetch("http://localhost:5000/api/enquiries", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || "Something went wrong.");
+      }
+
+      setFormStatus({
+        type: "success",
+        message: "Your enquiry has been received successfully.",
+      });
+
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        interest: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error("Enquiry submission error:", error);
+
+      setFormStatus({
+        type: "error",
+        message:
+          "We couldn't send your enquiry right now. Please try again.",
+      });
+    }
   };
   return (
     <main className="contact-page">
