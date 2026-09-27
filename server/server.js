@@ -1,9 +1,13 @@
 import express from "express";
 import cors from "cors";
+import "dotenv/config";
+import connectDB from "./config/db.js";
+import Enquiry from "./models/Enquiry.js";
 
 const app = express();
 
 const PORT = 5000;
+connectDB();
 
 app.use(cors());
 app.use(express.json());
@@ -15,7 +19,7 @@ app.get("/api/health", (req, res) => {
   });
 });
 
-app.post("/api/enquiries", (req, res) => {
+app.post("/api/enquiries", async (req, res) => {
   const {
     name,
     email,
@@ -31,19 +35,30 @@ app.post("/api/enquiries", (req, res) => {
     });
   }
 
-  console.log("New enquiry received:");
-  console.log({
-    name,
-    email,
-    phone,
-    interest,
-    message,
-  });
+  try {
+    const enquiry = await Enquiry.create({
+      name,
+      email,
+      phone,
+      interest,
+      message,
+    });
 
-  res.status(201).json({
-    success: true,
-    message: "Enquiry received successfully.",
-  });
+    console.log("New enquiry saved to MongoDB:");
+    console.log(enquiry);
+
+    res.status(201).json({
+      success: true,
+      message: "Enquiry received successfully.",
+    });
+  } catch (error) {
+    console.error("Failed to save enquiry:", error.message);
+
+    res.status(500).json({
+      success: false,
+      message: "Unable to save enquiry. Please try again.",
+    });
+  }
 });
 
 app.listen(PORT, () => {
