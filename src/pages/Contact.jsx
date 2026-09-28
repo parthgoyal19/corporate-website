@@ -385,14 +385,19 @@ function Contact() {
             we'd be happy to have a conversation.
           </p>
 
-          <div className="contact-location-address">
+          <a
+            href="https://share.google/RjGIh1AwNzCknrlbW"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-location-address"
+          >
             <strong>Mutual Growth</strong>
             <p>
               108 Gold Arcade,<br />
               New Palasia,<br />
               Indore (M.P.) - 452001
             </p>
-          </div>
+          </a>
 
           <div className="contact-location-hours">
             <span>WORKING HOURS</span>

@@ -3,6 +3,7 @@ import cors from "cors";
 import "dotenv/config";
 import connectDB from "./config/db.js";
 import Enquiry from "./models/Enquiry.js";
+import sendEnquiryNotification from "./services/emailService.js";
 
 const app = express();
 
@@ -46,6 +47,10 @@ app.post("/api/enquiries", async (req, res) => {
 
     console.log("New enquiry saved to MongoDB:");
     console.log(enquiry);
+
+    await sendEnquiryNotification(enquiry);
+
+    console.log("Enquiry notification email sent successfully.");
 
     res.status(201).json({
       success: true,
