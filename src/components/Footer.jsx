@@ -44,11 +44,16 @@ function Footer() {
                 <div className="footer-column footer-contact">
                     <h4>CONTACT</h4>
 
-                    <p>
+                    <a
+                        href="https://share.google/RjGIh1AwNzCknrlbW"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="footer-address-link"
+                    >
                         108 Gold Arcade,<br />
                         New Palasia,<br />
                         Indore (M.P.) - 452001
-                    </p>
+                    </a>
 
                     <a href="tel:+919244286976">
                         +91 9244286976

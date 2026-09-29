@@ -1,4 +1,171 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+
+function GoogleLocationMap() {
+  const mapRef = useRef(null);
+
+  useEffect(() => {
+    const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
+
+    if (!apiKey) {
+      console.error("Google Maps API key is missing.");
+      return;
+    }
+
+    const initializeMap = () => {
+      if (!mapRef.current || !window.google?.maps) {
+        return;
+      }
+
+      /*
+        Gold Arcade / 3/1 New Palasia
+        Coordinates verified against multiple public
+        listings for Gold Arcade in this location.
+      */
+      const officeLocation = {
+        lat: 22.7268501,
+        lng: 75.8819776,
+      };
+
+      const map = new window.google.maps.Map(
+        mapRef.current,
+        {
+          center: officeLocation,
+
+          /*
+            Slightly closer than before so the
+            Gold Arcade location is easier to identify.
+          */
+          zoom: 17,
+
+          mapId: "DEMO_MAP_ID",
+
+          streetViewControl: false,
+          fullscreenControl: true,
+          mapTypeControl: false,
+          zoomControl: true,
+
+          gestureHandling: "cooperative",
+        }
+      );
+
+      /*
+        Create the custom Mutual Growth marker.
+        Because this uses latitude/longitude,
+        the marker moves with the actual map.
+      */
+
+      const markerContent =
+        document.createElement("div");
+
+      markerContent.className =
+        "mutual-growth-map-marker";
+
+      markerContent.innerHTML = `
+        <div class="mutual-growth-map-pin">
+          <span class="mutual-growth-map-pin-dot"></span>
+          <span class="mutual-growth-map-pin-tail"></span>
+        </div>
+
+        <div class="mutual-growth-map-label">
+          <span>MUTUAL GROWTH</span>
+          <strong>108 GOLD ARCADE</strong>
+        </div>
+      `;
+
+      const marker =
+        new window.google.maps.marker.AdvancedMarkerElement(
+          {
+            map,
+            position: officeLocation,
+            content: markerContent,
+            title: "Mutual Growth - 108 Gold Arcade",
+          }
+        );
+
+      /*
+        Clicking the Mutual Growth marker
+        opens Google Maps directly.
+      */
+
+      markerContent.addEventListener(
+        "click",
+        () => {
+          window.open(
+            "https://www.google.com/maps/search/?api=1&query=22.7268501,75.8819776",
+            "_blank",
+            "noopener,noreferrer"
+          );
+        }
+      );
+    };
+
+    /*
+      Google Maps may already exist if the
+      script has previously been loaded.
+    */
+
+    if (
+      window.google?.maps &&
+      window.google.maps.marker
+    ) {
+      initializeMap();
+      return;
+    }
+
+    const existingScript =
+      document.querySelector(
+        'script[data-google-maps="mutual-growth"]'
+      );
+
+    if (existingScript) {
+      existingScript.addEventListener(
+        "load",
+        initializeMap
+      );
+
+      return;
+    }
+
+    /*
+      Load Google Maps JavaScript API
+      with the marker library.
+    */
+
+    const script =
+      document.createElement("script");
+
+    script.src =
+      `https://maps.googleapis.com/maps/api/js?key=${apiKey}&libraries=marker`;
+
+    script.async = true;
+    script.defer = true;
+
+    script.dataset.googleMaps =
+      "mutual-growth";
+
+    script.addEventListener(
+      "load",
+      initializeMap
+    );
+
+    document.head.appendChild(script);
+
+    return () => {
+      script.removeEventListener(
+        "load",
+        initializeMap
+      );
+    };
+  }, []);
+
+  return (
+    <div
+      ref={mapRef}
+      className="contact-location-map"
+      aria-label="Mutual Growth office location map"
+    />
+  );
+}
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -404,28 +571,7 @@ function Contact() {
             <strong>Monday – Saturday · 10:00 AM – 7:00 PM</strong>
           </div>
         </div>
-
-        <div className="contact-location-visual">
-
-          <div className="location-grid"></div>
-
-          <div className="location-ring location-ring-one"></div>
-          <div className="location-ring location-ring-two"></div>
-
-          <div className="location-pin">
-            <span></span>
-          </div>
-
-          <div className="location-card">
-            <span>INDORE</span>
-            <strong>NEW PALASIA</strong>
-          </div>
-
-          <div className="location-coordinate">
-            MUTUAL GROWTH
-          </div>
-
-        </div>
+        <GoogleLocationMap />
 
       </section>
 
