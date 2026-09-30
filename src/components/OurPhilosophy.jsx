@@ -19,35 +19,48 @@ function OurPhilosophy() {
       <div className="philosophy-principles">
         <div className="philosophy-principle">
           <span>01</span>
-          <h3>Knowledge</h3>
-          <p>
-            Understand your money and make informed financial decisions.
-          </p>
+
+          <div className="philosophy-principle-content">
+            <h3>Knowledge</h3>
+            <p>
+              Understand your money and make informed financial decisions.
+            </p>
+          </div>
         </div>
 
         <div className="philosophy-principle">
           <span>02</span>
-          <h3>Discipline</h3>
-          <p>
-            Stay committed to the financial plan even when circumstances change.
-          </p>
+
+          <div className="philosophy-principle-content">
+            <h3>Discipline</h3>
+            <p>
+              Stay committed to the financial plan even when circumstances
+              change.
+            </p>
+          </div>
         </div>
 
         <div className="philosophy-principle">
           <span>03</span>
-          <h3>Consistency</h3>
-          <p>
-            Keep making the right financial decisions over time.
-          </p>
+
+          <div className="philosophy-principle-content">
+            <h3>Consistency</h3>
+            <p>
+              Keep making the right financial decisions over time.
+            </p>
+          </div>
         </div>
 
         <div className="philosophy-principle">
           <span>04</span>
-          <h3>Time</h3>
-          <p>
-            Give your financial strategy the time needed to work towards
-            long-term goals.
-          </p>
+
+          <div className="philosophy-principle-content">
+            <h3>Time</h3>
+            <p>
+              Give your financial strategy the time needed to work towards
+              long-term goals.
+            </p>
+          </div>
         </div>
       </div>
     </section>
