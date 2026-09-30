@@ -9589,3 +9589,261 @@
     transition: none;
   }
 }
+
+/* =========================================================
+   HOME POLISH — WHAT WE HELP YOU PLAN — REVISION
+   ========================================================= */
+
+.what-we-help {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Remove the previous decorative circles.
+   The section should feel structured, not decorative. */
+
+.what-we-help::before,
+.what-we-help::after {
+  display: none;
+}
+
+.what-we-help-heading,
+.financial-areas {
+  position: relative;
+  z-index: 2;
+}
+
+/* ---------------------------------------------------------
+   Planning system
+   --------------------------------------------------------- */
+
+.financial-areas {
+  position: relative;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 24px;
+  row-gap: 24px;
+  padding: 38px 0 30px;
+}
+
+/* A small central connection rather than a line
+   running awkwardly behind the cards. */
+
+.financial-areas::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 52px;
+  height: 1px;
+  background-color: #c9d5d5;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.financial-areas::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #ff9800;
+  box-shadow: 0 0 0 6px rgba(255, 152, 0, 0.08);
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+/* ---------------------------------------------------------
+   Cards
+   --------------------------------------------------------- */
+
+.financial-area {
+  position: relative;
+  min-height: 215px;
+  padding: 30px 32px;
+  background-color: #ffffff;
+  border: 1px solid #dfe6e5;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 47, 47, 0.045);
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+/* Remove the previous stagger completely. */
+
+.financial-area:nth-child(odd),
+.financial-area:nth-child(even) {
+  transform: none;
+}
+
+/* Every card belongs to the same system. */
+
+.financial-area:nth-child(1),
+.financial-area:nth-child(2),
+.financial-area:nth-child(3),
+.financial-area:nth-child(4),
+.financial-area:nth-child(5),
+.financial-area:nth-child(6) {
+  background-color: #ffffff;
+  border-color: #dfe6e5;
+  box-shadow: 0 8px 24px rgba(0, 47, 47, 0.045);
+}
+
+/* ---------------------------------------------------------
+   Number + accent
+   --------------------------------------------------------- */
+
+.financial-area span {
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+  margin-bottom: 35px;
+
+  color: #9aa8a8;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.financial-area span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 27px;
+  height: 1px;
+  background-color: #ff9800;
+}
+
+/* ---------------------------------------------------------
+   Typography
+   --------------------------------------------------------- */
+
+.financial-area h3 {
+  margin: 0;
+  color: #002f2f;
+  font-size: 27px;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+.financial-area p {
+  max-width: 260px;
+  margin-top: 9px;
+  color: #5e6b6b;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ---------------------------------------------------------
+   Subtle hover
+   --------------------------------------------------------- */
+
+.financial-area:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 152, 0, 0.35);
+  box-shadow: 0 18px 38px rgba(0, 47, 47, 0.09);
+}
+
+/* Give Invest a subtle identity without making it
+   look like a featured or more important service. */
+
+.financial-area:nth-child(3)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 32px;
+  right: 32px;
+  height: 2px;
+  background-color: #ff9800;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.financial-area:nth-child(3):hover::after {
+  opacity: 1;
+}
+
+/* ---------------------------------------------------------
+   Tablet
+   --------------------------------------------------------- */
+
+@media (max-width: 900px) {
+  .financial-areas {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 18px;
+    row-gap: 18px;
+    padding-bottom: 20px;
+  }
+
+  .financial-areas::before,
+  .financial-areas::after {
+    display: none;
+  }
+
+  .financial-area {
+    min-height: 200px;
+  }
+}
+
+/* ---------------------------------------------------------
+   Mobile
+   --------------------------------------------------------- */
+
+@media (max-width: 600px) {
+  .financial-areas {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 40px;
+    padding: 0;
+  }
+
+  .financial-area {
+    min-height: 175px;
+    padding: 27px;
+  }
+
+  .financial-area h3 {
+    font-size: 23px;
+  }
+
+  .financial-area p {
+    font-size: 14px;
+  }
+
+  .financial-area:hover {
+    transform: translateY(-4px);
+  }
+
+  .financial-area:nth-child(3)::after {
+    left: 27px;
+    right: 27px;
+  }
+}
+
+/* ---------------------------------------------------------
+   Reduced motion
+   --------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .financial-area {
+    transition: none;
+  }
+
+  .financial-area:hover {
+    transform: none;
+  }
+
+  .financial-area:nth-child(3)::after {
+    transition: none;
+  }
+}
