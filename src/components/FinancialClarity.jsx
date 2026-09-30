@@ -22,10 +22,45 @@ function FinancialClarity() {
         </p>
       </div>
 
-      <div className="financial-clarity-highlight">
-        <p>UNDERSTAND YOUR MONEY.</p>
-        <p>PLAN WITH PURPOSE.</p>
-        <p>BUILD FOR THE LONG TERM.</p>
+      <div className="financial-clarity-visual">
+        <div className="clarity-orbit clarity-orbit-outer"></div>
+        <div className="clarity-orbit clarity-orbit-inner"></div>
+
+        <div className="clarity-connector clarity-connector-one"></div>
+        <div className="clarity-connector clarity-connector-two"></div>
+        <div className="clarity-connector clarity-connector-three"></div>
+        <div className="clarity-connector clarity-connector-four"></div>
+
+        <div className="clarity-center">
+          <span>YOUR</span>
+          <strong>FINANCIAL LIFE</strong>
+        </div>
+
+        <div className="clarity-node clarity-node-one">
+          <span>01</span>
+          <strong>CASH FLOW</strong>
+        </div>
+
+        <div className="clarity-node clarity-node-two">
+          <span>02</span>
+          <strong>PROTECTION</strong>
+        </div>
+
+        <div className="clarity-node clarity-node-three">
+          <span>03</span>
+          <strong>INVESTING</strong>
+        </div>
+
+        <div className="clarity-node clarity-node-four">
+          <span>04</span>
+          <strong>RETIREMENT</strong>
+        </div>
+
+        <div className="clarity-principles">
+          <p>UNDERSTAND YOUR MONEY.</p>
+          <p>PLAN WITH PURPOSE.</p>
+          <p>BUILD FOR THE LONG TERM.</p>
+        </div>
       </div>
     </section>
   );
