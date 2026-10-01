@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import aboutHeroVisual from "../assets/aboutHeroVisual.png";
 function About() {
     return (
         <main className="about-page">
@@ -17,6 +18,15 @@ function About() {
                         more disciplined in approach and focused on the
                         long term.
                     </p>
+                </div>
+
+                <div className="about-hero-visual">
+                    <img
+                        src={aboutHeroVisual}
+                        alt="Financial planning and long-term wealth visual"
+                        className="about-hero-image"
+                    />
+
                 </div>
             </section>
             <section className="about-who-we-are">
